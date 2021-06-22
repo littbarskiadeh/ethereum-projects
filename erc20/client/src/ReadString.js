@@ -21,7 +21,6 @@ class ReadString extends React.Component {
     render() {
         // get the contract state from drizzleState
         const { HCoin } = this.props.drizzleState.contracts;
-        const { web3Stat } = this.props.drizzleState.web3;
 
         // using the saved `dataKey`, get the variable we're interested in
         const myString = HCoin.standard[this.state.dataKey];

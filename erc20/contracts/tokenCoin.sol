@@ -46,6 +46,10 @@ contract HCoin {
         name = tokenName;
     }
 
+    function setStandard(string memory _standard) public {
+        standard = _standard;
+    }
+
     function transfer(address _to, uint256 _value) public {
         //the following require statements are checking for overflows/underflows
         require(balanceOf[msg.sender] > _value);
@@ -61,6 +65,7 @@ contract HCoin {
         allowance[msg.sender][_spender] = _value;
         return true;
     }
+    
     // Transfer tokens from one address to another, from 
     function transferFrom(address _from, address _to, uint256 _value) public returns (bool _success){
         require(balanceOf[_from] > _value);

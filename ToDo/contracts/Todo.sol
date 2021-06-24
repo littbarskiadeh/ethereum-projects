@@ -48,7 +48,7 @@ contract Todo {
     function deleteTask(uint256 _id) public returns (bool _success) {
         uint256 element = ids[_id];
         delete ids[_id];
-        emit LogTaskDeleted("Task deleted with id", element);
+        emit LogTaskDeleted("Task deleted, id - ", element);
         return true;
     }
 
